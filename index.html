@@ -602,13 +602,16 @@
       <div class="footer-bottom">
         <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
         <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
-        </p> Pravin Mishra Portfolio v1.0 — Deployed on<span id="deployDate">05 Feb 2026 </span> — By Mustapha Nurudeen Olalekan </p>
-      </div>
+        <footer>
+         Pravin Mishra Portfolio v1.0 — Deployed on
+      <span id="deployDate"></span> — By Mustapha Nurudeen Olalekan
+  </footer>
 
       <script>
         const d = new Date();
-        const formattedDate = d.toISOString().split('T')[0];
-        document.getElementById("deployDate").textContent = formattedDate;
+        const options = { day: '2-digit', month: 'short', year: 'numeric' };
+        document.getElementById("deployDate").innerText =
+        d.toLocaleDateString("en-GB", options);
       </script>
     </div>
   </footer>
