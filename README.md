@@ -40,3 +40,18 @@ Add this line (example):
 ```
 
 ✅ This proof must be visible in your browser screenshot submission.
+
+## Footer Implementation
+
+### Features
+- Version display (v1.0)
+- Dynamic deployment date
+- Author attribution
+
+### Date Generation
+The deployment date is dynamically generated using JavaScript:
+
+```javascript
+// Format: DD Mon YYYY
+const date = new Date();
+const formatted = `${date.getDate()} ${date.toLocaleString('default', {month: 'short'})} ${date.getFullYear()}`;
